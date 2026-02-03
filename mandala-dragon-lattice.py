@@ -12,8 +12,8 @@ def set_depth_color(depth, max_level, rotation_index, symmetry):
     hue_offset = rotation_index / symmetry * 0.25
     hue = (base_hue + hue_offset) % 1.0
 
-    # Firey red, orange, golds
-    r, g, b = colorsys.hsv_to_rgb(hue, 0.9, 1.0)
+    # Red, orange, golds
+    r, g, b = colorsys.hsv_to_rgb(hue, 0.6, 0.9)
     t.pencolor(r, g, b)
 
 # ---------- Dragon recursion ----------
@@ -48,7 +48,7 @@ def dragon_mandala(level, length, symmetry):
 # ---------- Setup ----------
 LEVEL = 12
 LINE_LENGTH = 4
-SYMMETRY = 6   # try 6, 8, 12
+SYMMETRY = 6
 
 screen = turtle.Screen()
 screen.bgcolor("black")
