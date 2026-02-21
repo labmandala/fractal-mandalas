@@ -9,9 +9,9 @@ def teal_palette(depth, max_level, ring_i, ring_count, arm_i, symmetry):
     a = arm_i / symmetry
     
     # Teal-focused hue band
-    hue = (0.48 + 0.08 * (1 - d) + 0.04 * a) % 1.0
-    sat = 0.75 + 0.15 * (1 - d)
-    val = 0.6 + 0.4 * (1 - r)
+    hue = 0.50 + 0.06 * (1 - d)
+    sat = 0.75
+    val = 0.8
 
     return colorsys.hsv_to_rgb(hue, sat, val)
 
@@ -65,10 +65,10 @@ def dragon_mandala_rings(rings, base_radius, level, length):
             left_dragon(level, length, 0, level, ring_i, rings, arm_i, symmetry)
 
 # ---------- Setup ----------
-LEVEL = 10
+LEVEL = 9
 LINE_LENGTH = 5
-RINGS = 3
-BASE_RADIUS = 40
+RINGS = 2
+BASE_RADIUS = 45
 
 screen = turtle.Screen()
 screen.bgcolor("black")
